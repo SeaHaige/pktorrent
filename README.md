@@ -8,7 +8,7 @@ By using C++ interface, you can create a p2p client just just some line code.
 
 ----
 
-miniblink是一个开源的、单文件、基于libtorrent的，p2p torrent 开发库。
+pktorrent是一个开源的、单文件、基于libtorrent的，p2p torrent 开发库。
 
 通过其导出的C++接口，几行代码即可创建一个p2p客户端。
 
