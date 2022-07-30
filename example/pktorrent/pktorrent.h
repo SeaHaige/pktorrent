@@ -45,8 +45,7 @@ namespace Pktorrent {
 	*/
 	int add_torrent(TORRENT_SESSION sessionhandle, TORRENT_FILE& filehandle
 		, char* purl,char* path);
-
-	void add_dht_node(int sessionhandle, const char* phost, int port);
+	 
 	/** check download torrent progress
 	* @param filehandle torrent file handle
 	* @return 0 fail,1 download fininshed 2 downloading
