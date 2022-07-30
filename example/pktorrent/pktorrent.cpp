@@ -34,7 +34,7 @@ using namespace Pktorrent;
 int main(int argc,char*argv[])
 {
     char* p1 = Pktorrent::get_version();
-    //Pktorrent::set_dht_route_host("60.205.224.130:6889");
+
     printf("\r\n>>%s\r\n\r\n", p1);
     if (argc == 1) {
         printf("software usage :\r\n"
@@ -46,16 +46,13 @@ int main(int argc,char*argv[])
     TORRENT_FILE  file;
     char* purl = argv[1]; 
     set_listen_port(6881, 0);
-    //set_dht_route_host("49.235.119.213:6881");
+
     if (strncmp(purl, "magnet:", 7) == 0) {
         char* path =(char*) ((argc > 2) ? argv[2] : "./");
         printf("  downloading: %s -> %s ...\n", purl, path);
-        //set_dht_route_host("211.159.223.57:6881");
-        //set_dht_route_host("49.235.119.213:6881");
-        //set_dht_route_host("60.205.224.130:6881");
 
         int hd=add_torrent(-1, file, purl,(char*)path); 
-        //Pktorrent::add_dht_node(hd, "60.205.224.130", 6881);
+
         while (1) {
             int f=check_torrent_finish(file);
             if (f == 1) {
