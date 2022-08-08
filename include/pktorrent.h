@@ -1,5 +1,5 @@
 /**
-Copyright (c) 2018 SeaHaige
+Copyright (c) 2021 SeaHaige
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
@@ -30,10 +30,10 @@ namespace Pktorrent {
 
 	enum { invalid_session = -1 };
 	enum { invalid_file = -1 };
-	 
+
 	//set dht route address
     void set_dht_route_host(const char* phost);
-	//set torrent session listen port 
+	//set torrent session listen port
 	void set_listen_port(int port, bool inenablev6);
 	/** start download torrent
 	* @param sessionhandle torrent session handle default -1
@@ -41,7 +41,7 @@ namespace Pktorrent {
 	* @param purl Indicates torrent file address such as
 	*				test.mp4,test.mp4.torrent,magnet:?xt=urn:btih:*
 	* @param path Indicates torrent save path
-	* @return torrent session handle 
+	* @return torrent session handle
 	*/
 	int add_torrent(TORRENT_SESSION sessionhandle, TORRENT_FILE& filehandle
 		, char* purl,char* path);
@@ -60,7 +60,7 @@ namespace Pktorrent {
 	void close_file_handle(TORRENT_FILE filehandle);
 
 	void close_session_handle(TORRENT_SESSION session);
-	
+
 	bool get_file_magneturl(const char* pfile, char* magneturl, int magneturlsize);
 
 	bool get_file_magneturlv2(const char* pfile, char* magneturl, int magneturlsize);
